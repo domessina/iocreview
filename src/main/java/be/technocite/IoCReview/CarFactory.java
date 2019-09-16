@@ -1,8 +1,13 @@
 package be.technocite.IoCReview;
 
-public class CarFactory {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
+public class CarFactory {
+    @Autowired
     private AssemblyLine assemblyLine;
+
 
     public CarFactory(AssemblyLine assemblyLine) {
         this.assemblyLine = assemblyLine;
